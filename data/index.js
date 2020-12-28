@@ -112,7 +112,7 @@ const restaurantData = [
     name: 'ByProgrammers Pizza',
     rating: 4.8,
     categories: [2, 4, 6],
-    priceRating: expensive,
+    priceRating: fairPrice,
     photo: images.pizza_restaurant,
     duration: '15 - 20 min',
     location: {

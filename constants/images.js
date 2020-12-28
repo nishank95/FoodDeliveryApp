@@ -57,6 +57,7 @@ export default {
   pizza,
   sarawak_laksa,
   sushi,
+  salad,
   teh_c_peng,
   tomato_pasta,
 };

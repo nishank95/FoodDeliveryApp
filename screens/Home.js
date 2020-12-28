@@ -10,10 +10,10 @@ import {
   FlatList,
 } from 'react-native';
 
-import {icons, images, COLORS, SIZES, FONTS} from '../constants';
+import {icons, COLORS, SIZES, FONTS} from '../constants';
 import {initialCurrentLocation, categoryData, restaurantData} from '../data';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const [categories, setCategories] = useState(categoryData);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [restaurants, setRestaurants] = useState(restaurantData);
@@ -155,10 +155,10 @@ const Home = () => {
     const renderRestaurantData = ({item}) => {
       return (
         <TouchableOpacity
-          style={{
-            marginBottom: SIZES.padding * 2,
-            // onPress => navigate to restaurant screen
-          }}>
+          style={{marginBottom: SIZES.padding * 2}}
+          onPress={() =>
+            navigation.navigate('Restaurant', {item, currentLocation})
+          }>
           <View>
             <Image
               source={item.photo}
